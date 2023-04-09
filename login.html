@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <body>
+      <header>
+        <script src="https://kit.fontawesome.com/bcb2c05d90.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E-Commerce</title>
+        <!-- Font Awesome Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <!-- <link rel="stylesheet" href="css/all.min.css" /> -->
+        <!-- Css -->
+        <link rel="stylesheet" href="css/style.css">
+        <!--  -->
+    </head>
+          <a href="index.html" class="logo"><img src="img/logo.svg" alt="" class="logo"></a>
+          <nav>
+              <ul id="navbar">
+                  <li><a href="index.html" class="active">Home</a></li>
+                  <li><a href="shop.html">Shop</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li id="lg-bag"><a href="cart.html"><i class="fa fa-bag-shopping"></i></a></li>
+                  <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+              </ul>
+          </nav>
+          <div id="mobile">
+              <a href="cart.html"><i class="fa fa-bag-shopping"></i></a>
+              <i id="bar" class="fas fa-outdent"></i>
+  
+          </div>
+      </header>
+    <style>
+      
+      body {
+        background-image: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDZ8fGhkJTIwaW1hZ2VzJTIwcmVsYXRlZCUyMHRvJTIwY2xvdGhlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60');
+        background-repeat: no-repeat;
+        background-size: contain;
+        font-family: Arial, sans-serif;
+      }
+      #login-box {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 black;
+        margin: 150px auto;
+        padding: 20px;
+        width: 300px;
+        background: transparent;
+        
+      }
+       
+      h1 {
+        text-align: center;
+        color: black;
+      }
+      label {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input[type=text], input[type=password] {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        padding: 10px;
+        width: 100%;
+        color: black;
+      }
+      input[type=submit] {
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+      }
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+      button {
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        cursor: pointer;
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .error {
+        color: red;
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+      #newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-image: url("../img/banner/b14.png");
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-color: #041e42;
+}
+#newsletter h4 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+#newsletter p {
+  color: #818ea0;
+  font-size: 14px;
+  font-weight: 500;
+}
+#newsletter p span {
+  color: #ffbd27;
+}
+#newsletter .form {
+  display: flex;
+  width: 40%;
+}
+#newsletter input {
+  width: 100%;
+  height: 3.125rem;
+  padding: 0 1.25rem;
+  font-size: 14px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#newsletter button {
+  background: #088178;
+  color: #fff;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* ==============================*/
+/* -----------  Footer   ------- */
+/* =============================*/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding-bottom: 20px !important;
+}
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+footer .logo {
+  margin-bottom: 30px;
+}
+footer h4 {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+footer .follow {
+  margin-top: 20px;
+}
+footer .follow i {
+  color: #465b52;
+  margin-right: 4px;
+  cursor: pointer;
+}
+footer .follow i:hover,
+footer a:hover {
+  color: #088178;
+}
+
+footer .install .row img {
+  border: 1px solid #088178;
+  border-radius: 6px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+    </style>
+  </head>
+  <body>
+    <div id="login-box">
+      <h1>Login</h1>
+      <form method="post" id="loginForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+
+        
+        <p >Join our website</p><a>Signup?</a>
+        <a href="signup.html"></a>
+        <div class="signup form"></div>
+        <button type="submit" id="signinButton">Submit</button>
+        
+      </form>
+      <div id="error-message"></div>
+    </div>
+
+    <script>
+      // Get form and button elements
+      const form = document.getElementById('loginForm');
+      const signinButton=document.getElementById('signinButton')
+     
+      const errorMessage = document.querySelector('#error-message');
+
+      // Add click event listener to button
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Get username and password values
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        console.log(username, password);
+
+        // Validate username and password
+        if (username === '') {
+          errorMessage.innerHTML = 'Please enter a username.';
+          return;
+        }
+
+        if (password === '') {
+          errorMessage.innerHTML = 'Please enter a password.';
+          return;
+        }
+
+        // Submit form
+        const res=fetch('http://localhost:1234/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({username: username.trim(), password: password.trim()})
+        })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+          if (data.message === 'user not found') {
+            location.pathname = '/signup.html';
+          } else {
+            location.pathname = '/';
+          }
+        })
+        .catch(e => {
+          console.log(e.message)
+        })
+      });
+    </script>
+  </body>
+</html>
+<!-- ===================== -->
+      <!--   Newsletter    -->
+      <!-- ===================== -->
+      <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+          <h4>Sign Up For Newsletters</h4>
+          <p>
+            Get E-mail updates about our latest shop and
+            <span>special offers.</span>
+          </p>
+        </div>
+        <div class="form">
+          <input type="text" placeholder="Your email adress" />
+          <button class="normal">Sign Up</button>
+        </div>
+      </section>
+
+<!-- ===================== -->
+<!-----       Footer -------->
+<!-- ===================== -->
+<footer class="section-p1">
+<div class="col">
+  <img src="img/logo.svg" alt="" class="logo">
+  <h4>Contact</h4>
+  <p><Strong>Adress:</Strong> Mumbai,Maharashtra </p>
+  <p><Strong>Phone:</Strong> 400015</p>
+  <p><Strong>Hours:</Strong> 10:00am -11:00pm, Sat -Thu </p>
+  <div class="icon follow">
+      <h4>Follow US</h4>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-pinterest-p"></i>
+      <i class="fab fa-youtube"></i>
+  </div>
+</div>
+<div class="col">
+  <h4>About</h4>
+  <a href="#">About Us</a>
+  <a href="#">Delivery Information</a>
+  <a href="#">Privacy Policy</a>
+  <a href="#">Terms & Conditions</a>
+  <a href="#">Contact Us</a>
+</div>
+<div class="col">
+  <h4>My Account</h4>
+  <a href="#">Sign In</a>
+  <a href="#">View Cart</a>
+  <a href="#">My Wishlist</a>
+  <a href="#">Track My Order</a>
+  <a href="#">Help</a>
+</div>
+<div class="col install">
+  <h4>Install App</h4>
+  <p>From App Store or Google Play</p>
+  <div class="row">
+      <img src="img/pay/app.jpg" alt="">
+      <img src="img/pay/play.jpg" alt="">
+  </div>
+  <p>Secured Payment Gateways</p>
+  <img src="img/pay/pay.png" alt="">
+</div>
+<div class="copyright">
+  <p>&copy; 2023,E-Commerce Website</p>
+</div>
+</footer>
+<!-- ============================================================================================================ -->
+<script src="script.js"></script>
+</body>
+
+</html>
